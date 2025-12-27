@@ -54,43 +54,43 @@ export default function MeasurementOutcomes() {
   ];
 
   return (
-    <section id="outcomes" className="min-h-screen bg-gradient-to-br from-[#FAFAF8] to-[#F8F6F3] pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
+    <section id="outcomes" className="min-h-screen bg-gradient-to-br from-[#FAFAF8] to-[#F8F6F3] pt-8 sm:pt-10 lg:pt-12 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-          <div className="inline-block bg-[#E8E3F3] rounded-full px-2.5 sm:px-3 py-0.5 sm:py-1 mb-2 sm:mb-3">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-10">
+          <div className="inline-block bg-[#E8E3F3] rounded-full px-2 py-0.5 mb-1 sm:mb-1.5">
             <span className="text-xs font-semibold text-[#2D1B4E] tracking-wider uppercase">Success Metrics</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2D1B4E] mb-2 lg:mb-3 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[#2D1B4E] mb-1 lg:mb-1.5 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
             Measurement &amp; Expected Outcomes
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xs text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Clear, measurable KPIs to track progress and demonstrate ROI throughout the engagement
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-10 lg:mb-12">
+        <div className="grid md:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 lg:mb-10">
           {kpis.map((category, index) => (
             <div
               key={index}
-              className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow"
+              className="bg-white rounded-xl lg:rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow"
             >
-              <div className={`bg-gradient-to-r ${category.color} p-6`}>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <i className={`${category.icon} text-2xl text-white`}></i>
+              <div className={`bg-gradient-to-r ${category.color} p-4`}>
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <i className={`${category.icon} text-base text-white`}></i>
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{category.category}</h3>
+                  <h3 className="text-base sm:text-lg font-bold text-white">{category.category}</h3>
                 </div>
               </div>
 
-              <div className="p-6">
-                <div className="space-y-4">
+              <div className="p-4">
+                <div className="space-y-3">
                   {category.metrics.map((metric, idx) => (
-                    <div key={idx} className="border-b border-gray-200 pb-4 last:border-0 last:pb-0">
-                      <div className="flex justify-between items-start mb-2">
-                        <span className="text-sm font-medium text-gray-700">{metric.name}</span>
+                    <div key={idx} className="border-b border-gray-200 pb-3 last:border-0 last:pb-0">
+                      <div className="flex justify-between items-start mb-1.5">
+                        <span className="text-xs font-medium text-gray-700">{metric.name}</span>
                         <span
-                          className={`text-xs font-bold px-2 py-1 rounded-full whitespace-nowrap ${
+                          className={`text-xs font-bold px-1.5 py-0.5 rounded-full whitespace-nowrap ${
                             metric.growth.startsWith('-')
                               ? 'bg-green-100 text-green-700'
                               : 'bg-blue-100 text-blue-700'
@@ -99,15 +99,15 @@ export default function MeasurementOutcomes() {
                           {metric.growth}
                         </span>
                       </div>
-                      <div className="flex items-center space-x-4">
+                      <div className="flex items-center space-x-3">
                         <div className="flex-1">
-                          <div className="text-xs text-gray-500 mb-1">Baseline</div>
-                          <div className="text-lg font-bold text-gray-600">{metric.baseline}</div>
+                          <div className="text-xs text-gray-500 mb-0.5">Baseline</div>
+                          <div className="text-sm font-bold text-gray-600">{metric.baseline}</div>
                         </div>
-                        <i className="ri-arrow-right-line text-[#D4AF37] text-xl"></i>
+                        <i className="ri-arrow-right-line text-[#D4AF37] text-base"></i>
                         <div className="flex-1">
-                          <div className="text-xs text-gray-500 mb-1">Target</div>
-                          <div className="text-lg font-bold text-[#2D1B4E]">{metric.target}</div>
+                          <div className="text-xs text-gray-500 mb-0.5">Target</div>
+                          <div className="text-sm font-bold text-[#2D1B4E]">{metric.target}</div>
                         </div>
                       </div>
                     </div>
@@ -118,39 +118,39 @@ export default function MeasurementOutcomes() {
           ))}
         </div>
 
-        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
-          <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold text-[#2D1B4E] mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <div className="bg-white rounded-xl lg:rounded-2xl shadow-xl p-5 sm:p-6 md:p-8">
+          <div className="text-center mb-6 sm:mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#2D1B4E] mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>
               Reporting &amp; Communication Schedule
             </h3>
-            <p className="text-gray-600">
+            <p className="text-xs text-gray-600">
               Stay informed with regular updates and transparent reporting throughout the engagement
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-4 gap-4">
             {reportingSchedule.map((item, index) => (
               <div
                 key={index}
-                className="text-center p-6 bg-gradient-to-br from-[#F5F5F5] to-[#E8E3F3] rounded-2xl hover:shadow-lg transition-all cursor-pointer"
+                className="text-center p-4 bg-gradient-to-br from-[#F5F5F5] to-[#E8E3F3] rounded-xl hover:shadow-lg transition-all cursor-pointer"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-[#2D1B4E] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className={`${item.icon} text-2xl text-white`}></i>
+                <div className="w-12 h-12 bg-gradient-to-br from-[#2D1B4E] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <i className={`${item.icon} text-lg text-white`}></i>
                 </div>
-                <div className="text-xl font-bold text-[#2D1B4E] mb-2">{item.frequency}</div>
-                <div className="text-sm text-gray-600">{item.deliverable}</div>
+                <div className="text-base font-bold text-[#2D1B4E] mb-1">{item.frequency}</div>
+                <div className="text-xs text-gray-600">{item.deliverable}</div>
               </div>
             ))}
           </div>
 
-          <div className="mt-10 p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                <i className="ri-shield-check-line text-xl text-white"></i>
+          <div className="mt-6 sm:mt-8 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-2 border-green-200">
+            <div className="flex items-start space-x-3">
+              <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <i className="ri-shield-check-line text-base text-white"></i>
               </div>
               <div>
-                <h4 className="text-lg font-bold text-[#2D1B4E] mb-2">Performance Guarantee</h4>
-                <p className="text-sm text-gray-700 leading-relaxed">
+                <h4 className="text-sm sm:text-base font-bold text-[#2D1B4E] mb-1">Performance Guarantee</h4>
+                <p className="text-xs text-gray-700 leading-relaxed">
                   If we don't achieve at least 70% of the outlined targets by month 6, we'll continue working 
                   with you for an additional month at no extra cost until we reach the agreed-upon goals. 
                   Your success is our success.

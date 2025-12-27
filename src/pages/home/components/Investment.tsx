@@ -25,26 +25,26 @@ export default function Investment() {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[#2D1B4E] to-[#1A0F2E] pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen bg-gradient-to-br from-[#2D1B4E] to-[#1A0F2E] pt-8 sm:pt-10 lg:pt-12 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-          <div className="inline-block bg-[#E8E3F3] rounded-full px-2.5 sm:px-3 py-0.5 sm:py-1 mb-2 sm:mb-3">
+        <div className="text-center mb-5 sm:mb-6 lg:mb-8">
+          <div className="inline-block bg-[#E8E3F3] rounded-full px-2 py-0.5 mb-1 sm:mb-1.5">
             <span className="text-xs font-semibold text-[#2D1B4E] tracking-wider uppercase">Investment</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 lg:mb-3 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 lg:mb-1.5 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
             Flexible Payment Options
           </h2>
-          <p className="text-sm sm:text-base text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xs text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Choose the payment plan that works best for your business
           </p>
         </div>
 
         {/* Payment Toggle */}
-        <div className="flex justify-center mb-6 sm:mb-8 lg:mb-10">
+        <div className="flex justify-center mb-4 sm:mb-5 lg:mb-6">
           <div className="bg-white/10 backdrop-blur-md rounded-full p-1.5 inline-flex">
             <button
               onClick={() => setSelectedPlan('monthly')}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all whitespace-nowrap ${
+              className={`px-5 py-1.5 rounded-full text-xs font-semibold transition-all whitespace-nowrap ${
                 selectedPlan === 'monthly'
                   ? 'bg-[#D4AF37] text-[#2D1B4E]'
                   : 'text-white hover:text-[#D4AF37]'
@@ -54,48 +54,48 @@ export default function Investment() {
             </button>
             <button
               onClick={() => setSelectedPlan('onetime')}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all relative whitespace-nowrap ${
+              className={`px-5 py-1.5 rounded-full text-xs font-semibold transition-all relative whitespace-nowrap ${
                 selectedPlan === 'onetime'
                   ? 'bg-[#D4AF37] text-[#2D1B4E]'
                   : 'text-white hover:text-[#D4AF37]'
               }`}
             >
               One-Time Payment
-              <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">
+              <span className="absolute -top-1.5 -right-1.5 bg-green-500 text-white text-xs px-1.5 py-0.5 rounded-full">
                 Save 15%
               </span>
             </button>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-4 max-w-6xl mx-auto">
           {/* Pricing Card */}
-          <div className="bg-white rounded-2xl lg:rounded-3xl shadow-2xl overflow-hidden">
-            <div className="bg-gradient-to-br from-[#D4AF37] to-[#C19B2F] p-5 sm:p-6 lg:p-8 text-center">
-              <h3 className="text-lg sm:text-xl font-bold text-[#2D1B4E] mb-1.5">
+          <div className="bg-white rounded-xl lg:rounded-2xl shadow-2xl overflow-hidden">
+            <div className="bg-gradient-to-br from-[#D4AF37] to-[#C19B2F] p-3 sm:p-4 lg:p-5 text-center">
+              <h3 className="text-sm sm:text-base font-bold text-[#2D1B4E] mb-0.5">
                 {selectedPlan === 'monthly' ? 'Monthly Payment Plan' : 'One-Time Payment'}
               </h3>
-              <p className="text-xs sm:text-sm text-[#2D1B4E]/80 mb-4 sm:mb-5">
+              <p className="text-xs text-[#2D1B4E]/80 mb-2 sm:mb-3">
                 {selectedPlan === 'monthly' ? '6 monthly installments' : 'One-time payment with 15% discount'}
               </p>
               
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-5 lg:p-6 mb-3 sm:mb-4">
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg lg:rounded-xl p-2.5 sm:p-3 lg:p-4 mb-2">
                 {selectedPlan === 'monthly' ? (
                   <>
-                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2D1B4E] mb-1.5">₹37,500</div>
-                    <div className="text-xs sm:text-sm text-[#2D1B4E]/80">per month × 6 months</div>
-                    <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-[#2D1B4E]/20">
-                      <div className="text-base sm:text-lg font-semibold text-[#2D1B4E]">Total: ₹2,25,000</div>
+                    <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#2D1B4E] mb-0.5">₹37,500</div>
+                    <div className="text-xs text-[#2D1B4E]/80">per month × 6 months</div>
+                    <div className="mt-2 pt-2 border-t border-[#2D1B4E]/20">
+                      <div className="text-xs sm:text-sm font-semibold text-[#2D1B4E]">Total: ₹2,25,000</div>
                     </div>
                   </>
                 ) : (
                   <>
-                    <div className="text-xs sm:text-sm text-[#2D1B4E]/60 line-through mb-1">₹2,25,000</div>
-                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2D1B4E] mb-1.5">₹1,91,250</div>
-                    <div className="text-xs sm:text-sm text-[#2D1B4E]/80">one-time payment</div>
-                    <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-[#2D1B4E]/20">
-                      <div className="inline-flex items-center bg-green-500 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
-                        <i className="ri-price-tag-3-line mr-1.5 sm:mr-2"></i>
+                    <div className="text-xs text-[#2D1B4E]/60 line-through mb-0.5">₹2,25,000</div>
+                    <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#2D1B4E] mb-0.5">₹1,91,250</div>
+                    <div className="text-xs text-[#2D1B4E]/80">one-time payment</div>
+                    <div className="mt-2 pt-2 border-t border-[#2D1B4E]/20">
+                      <div className="inline-flex items-center bg-green-500 text-white px-2 py-0.5 rounded-full text-xs font-semibold">
+                        <i className="ri-price-tag-3-line mr-1"></i>
                         Save ₹33,750 (15% OFF)
                       </div>
                     </div>
@@ -114,42 +114,42 @@ export default function Investment() {
               </div>
             </div>
 
-            <div className="p-5 sm:p-6 lg:p-8">
-              <h4 className="text-lg sm:text-xl font-bold text-[#2D1B4E] mb-4 sm:mb-5">What's Included</h4>
-              <ul className="space-y-2 sm:space-y-2.5">
+            <div className="p-4 sm:p-5 lg:p-6">
+              <h4 className="text-base sm:text-lg font-bold text-[#2D1B4E] mb-3 sm:mb-4">What's Included</h4>
+              <ul className="space-y-1.5 sm:space-y-2">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start">
-                    <i className="ri-checkbox-circle-fill text-green-600 text-base sm:text-lg mt-0.5 mr-2 sm:mr-3 flex-shrink-0"></i>
-                    <span className="text-sm sm:text-base text-gray-700">{feature}</span>
+                    <i className="ri-checkbox-circle-fill text-green-600 text-sm sm:text-base mt-0.5 mr-2 flex-shrink-0"></i>
+                    <span className="text-xs sm:text-sm text-gray-700">{feature}</span>
                   </li>
                 ))}
               </ul>
 
-              <button className="w-full mt-6 sm:mt-8 bg-gradient-to-r from-[#2D1B4E] to-[#4A4A9B] text-white py-3 sm:py-4 rounded-lg lg:rounded-xl text-sm sm:text-base font-semibold hover:shadow-xl transition-all whitespace-nowrap cursor-pointer">
-                <i className="ri-check-double-line mr-2"></i>
+              <button className="w-full mt-4 sm:mt-6 bg-gradient-to-r from-[#2D1B4E] to-[#4A4A9B] text-white py-2 sm:py-2.5 rounded-lg lg:rounded-xl text-xs sm:text-sm font-semibold hover:shadow-xl transition-all whitespace-nowrap cursor-pointer">
+                <i className="ri-check-double-line mr-1.5"></i>
                 Accept Proposal
               </button>
             </div>
           </div>
 
           {/* Monthly Breakdown */}
-          <div className="bg-white rounded-2xl lg:rounded-3xl shadow-2xl p-5 sm:p-6 lg:p-8">
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#2D1B4E] mb-4 sm:mb-5 lg:mb-6 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <div className="bg-white rounded-xl lg:rounded-2xl shadow-2xl p-4 sm:p-5 lg:p-6">
+            <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#2D1B4E] mb-3 sm:mb-4 lg:mb-5 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
               {selectedPlan === 'monthly' ? 'Monthly Payment Schedule' : 'Investment Breakdown'}
             </h3>
             
-            <div className="space-y-2 sm:space-y-2.5 mb-6 sm:mb-8">
+            <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
               {monthlyBreakdown.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between p-3 sm:p-4 bg-gradient-to-r from-[#F8F6F3] to-[#E8E3F3] rounded-lg lg:rounded-xl hover:shadow-md transition-all"
+                  className="flex items-center justify-between p-2.5 sm:p-3 bg-gradient-to-r from-[#F8F6F3] to-[#E8E3F3] rounded-lg lg:rounded-xl hover:shadow-md transition-all"
                 >
                   <div>
-                    <div className="font-bold text-sm sm:text-base text-[#2D1B4E]">{item.month}</div>
-                    <div className="text-xs sm:text-sm text-gray-600">{item.focus}</div>
+                    <div className="font-bold text-xs sm:text-sm text-[#2D1B4E]">{item.month}</div>
+                    <div className="text-xs text-gray-600">{item.focus}</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-lg sm:text-xl font-bold text-[#D4AF37]">
+                    <div className="text-base sm:text-lg font-bold text-[#D4AF37]">
                       {selectedPlan === 'monthly' ? item.amount : '₹31,875'}
                     </div>
                     {selectedPlan === 'onetime' && (
@@ -160,27 +160,27 @@ export default function Investment() {
               ))}
             </div>
 
-            <div className="bg-gradient-to-br from-[#2D1B4E] to-[#1A0F2E] rounded-xl lg:rounded-2xl p-4 sm:p-5 lg:p-6 text-white">
-              <div className="flex items-center justify-between mb-3 sm:mb-4">
-                <span className="text-base sm:text-lg font-semibold">Total Investment</span>
-                <span className="text-2xl sm:text-3xl font-bold text-[#D4AF37]">
+            <div className="bg-gradient-to-br from-[#2D1B4E] to-[#1A0F2E] rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-5 text-white">
+              <div className="flex items-center justify-between mb-2 sm:mb-3">
+                <span className="text-sm sm:text-base font-semibold">Total Investment</span>
+                <span className="text-xl sm:text-2xl font-bold text-[#D4AF37]">
                   {selectedPlan === 'monthly' ? '₹2,25,000' : '₹1,91,250'}
                 </span>
               </div>
               {selectedPlan === 'onetime' && (
-                <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-white/20">
-                  <span className="text-xs sm:text-sm text-gray-300">You Save</span>
-                  <span className="text-lg sm:text-xl font-bold text-green-400">₹33,750</span>
+                <div className="flex items-center justify-between pt-2 sm:pt-3 border-t border-white/20">
+                  <span className="text-xs text-gray-300">You Save</span>
+                  <span className="text-base sm:text-lg font-bold text-green-400">₹33,750</span>
                 </div>
               )}
             </div>
 
-            <div className="mt-4 sm:mt-5 lg:mt-6 p-3 sm:p-4 bg-blue-50 rounded-lg lg:rounded-xl">
-              <div className="flex items-start space-x-2 sm:space-x-3">
-                <i className="ri-shield-star-line text-lg sm:text-xl lg:text-2xl text-blue-600 flex-shrink-0"></i>
+            <div className="mt-3 sm:mt-4 lg:mt-5 p-2.5 sm:p-3 bg-blue-50 rounded-lg lg:rounded-xl">
+              <div className="flex items-start space-x-2">
+                <i className="ri-shield-star-line text-base sm:text-lg text-blue-600 flex-shrink-0"></i>
                 <div>
-                  <h4 className="font-bold text-sm sm:text-base text-[#2D1B4E] mb-1">Payment Terms</h4>
-                  <p className="text-xs sm:text-sm text-gray-600">
+                  <h4 className="font-bold text-xs sm:text-sm text-[#1A1A1A] mb-0.5">Payment Terms</h4>
+                  <p className="text-xs text-[#4A4A4A]">
                     {selectedPlan === 'monthly' 
                       ? 'First payment due upon proposal acceptance. Subsequent payments due on the 1st of each month.'
                       : 'Full payment due within 7 days of proposal acceptance. 15% discount applied automatically.'}
@@ -192,34 +192,34 @@ export default function Investment() {
         </div>
 
         {/* ROI Projection */}
-        <div className="mt-12 sm:mt-14 lg:mt-16 max-w-6xl mx-auto bg-white rounded-2xl lg:rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 md:p-12">
-          <div className="text-center mb-6 sm:mb-8">
-            <h3 className="text-2xl sm:text-3xl font-bold text-[#2D1B4E] mb-2 sm:mb-3 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <div className="mt-10 sm:mt-12 lg:mt-14 max-w-6xl mx-auto bg-white rounded-xl lg:rounded-2xl shadow-2xl p-5 sm:p-6 lg:p-8">
+          <div className="text-center mb-5 sm:mb-6">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#1A1A1A] mb-1.5 sm:mb-2 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
               Expected Return on Investment
             </h3>
-            <p className="text-sm sm:text-base text-gray-600">Conservative projections based on industry benchmarks</p>
+            <p className="text-xs sm:text-sm text-[#4A4A4A]">Conservative projections based on industry benchmarks</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
-            <div className="text-center p-4 sm:p-5 lg:p-6 bg-gradient-to-br from-[#E8E3F3] to-[#F8F6F3] rounded-xl lg:rounded-2xl">
-              <div className="text-3xl sm:text-4xl font-bold text-[#2D1B4E] mb-1.5 sm:mb-2">60+</div>
+          <div className="grid md:grid-cols-4 gap-3 sm:gap-4 lg:gap-5">
+            <div className="text-center p-3 sm:p-4 lg:p-5 bg-gradient-to-br from-[#F5F5F0] to-[#FAFAF5] rounded-xl lg:rounded-2xl">
+              <div className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-1 sm:mb-1.5">60+</div>
               <div className="text-xs sm:text-sm text-gray-600">Monthly Bookings</div>
               <div className="text-xs text-gray-500 mt-0.5 sm:mt-1">by Month 6</div>
             </div>
-            <div className="text-center p-4 sm:p-5 lg:p-6 bg-gradient-to-br from-[#E8E3F3] to-[#F8F6F3] rounded-xl lg:rounded-2xl">
-              <div className="text-3xl sm:text-4xl font-bold text-[#2D1B4E] mb-1.5 sm:mb-2">₹7,200</div>
-              <div className="text-xs sm:text-sm text-gray-600">Avg. Monthly Revenue</div>
-              <div className="text-xs text-gray-500 mt-0.5 sm:mt-1">per booking</div>
+            <div className="text-center p-3 sm:p-4 lg:p-5 bg-gradient-to-br from-[#F5F5F0] to-[#FAFAF5] rounded-xl lg:rounded-2xl">
+              <div className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-1 sm:mb-1.5">₹7,200</div>
+              <div className="text-xs text-[#4A4A4A]">Avg. Monthly Revenue</div>
+              <div className="text-xs text-gray-500 mt-0.5">per booking</div>
             </div>
-            <div className="text-center p-4 sm:p-5 lg:p-6 bg-gradient-to-br from-[#E8E3F3] to-[#F8F6F3] rounded-xl lg:rounded-2xl">
-              <div className="text-3xl sm:text-4xl font-bold text-[#2D1B4E] mb-1.5 sm:mb-2">₹4.32L</div>
-              <div className="text-xs sm:text-sm text-gray-600">Monthly Revenue</div>
-              <div className="text-xs text-gray-500 mt-0.5 sm:mt-1">by Month 6</div>
+            <div className="text-center p-3 sm:p-4 lg:p-5 bg-gradient-to-br from-[#F5F5F0] to-[#FAFAF5] rounded-xl lg:rounded-2xl">
+              <div className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-1 sm:mb-1.5">₹4.32L</div>
+              <div className="text-xs text-[#4A4A4A]">Monthly Revenue</div>
+              <div className="text-xs text-gray-500 mt-0.5">by Month 6</div>
             </div>
-            <div className="text-center p-4 sm:p-5 lg:p-6 bg-gradient-to-br from-[#D4AF37] to-[#C19B2F] rounded-xl lg:rounded-2xl">
-              <div className="text-3xl sm:text-4xl font-bold text-[#2D1B4E] mb-1.5 sm:mb-2">11.5x</div>
-              <div className="text-xs sm:text-sm text-[#2D1B4E] font-semibold">ROI Potential</div>
-              <div className="text-xs text-[#2D1B4E]/80 mt-0.5 sm:mt-1">within 6 months</div>
+            <div className="text-center p-3 sm:p-4 lg:p-5 bg-gradient-to-br from-[#C9A961] to-[#D4AF37] rounded-xl lg:rounded-2xl">
+              <div className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] mb-1 sm:mb-1.5">11.5x</div>
+              <div className="text-xs text-[#1A1A1A] font-semibold">ROI Potential</div>
+              <div className="text-xs text-[#1A1A1A]/80 mt-0.5">within 6 months</div>
             </div>
           </div>
 

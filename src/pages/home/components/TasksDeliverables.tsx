@@ -110,7 +110,7 @@ export default function TasksDeliverables() {
     <section className="min-h-screen bg-gradient-to-br from-[#F8F6F3] to-[#FAFAF8] pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-6 sm:mb-8 lg:mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A0F2E] mb-2 lg:mb-3 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-1.5 lg:mb-2 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
             Complete Deliverables Package
           </h2>
           <p className="text-sm sm:text-base text-[#4A4A4A] leading-relaxed">

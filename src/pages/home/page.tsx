@@ -132,7 +132,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden bg-[#FAFAF8]">
+    <div className="relative h-screen overflow-hidden bg-[#F5F5F0]">
       <div 
         ref={containerRef}
         className="flex h-screen overflow-x-hidden overflow-y-hidden snap-x snap-mandatory slide-container"

@@ -48,14 +48,14 @@ export default function ResourceAllocation() {
   return (
     <section className="min-h-screen bg-gradient-to-br from-[#FAFAF8] to-[#F8F6F3] pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-          <div className="inline-block bg-[#E8E3F3] rounded-full px-2.5 sm:px-3 py-0.5 sm:py-1 mb-2 sm:mb-3">
-            <span className="text-xs font-semibold text-[#2D1B4E] tracking-wider uppercase">Resources</span>
+        <div className="text-center mb-6 sm:mb-8 lg:mb-10">
+          <div className="inline-block bg-[#C9A961]/20 border border-[#C9A961]/30 rounded-full px-2.5 sm:px-3 py-0.5 sm:py-1 mb-1.5 sm:mb-2">
+            <span className="text-xs font-semibold text-[#C9A961] tracking-wider uppercase">Resources</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2D1B4E] mb-2 lg:mb-3 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-1.5 lg:mb-2 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
             Resource Allocation Overview
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#4A4A4A] max-w-3xl mx-auto leading-relaxed">
             Comprehensive breakdown of time, investment, and team dedication for your success
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function ResourceAllocation() {
                           </span>
                         )}
                       </div>
-                      <div className="text-xs sm:text-sm font-bold text-[#D4AF37]">
+                      <div className="text-xs sm:text-sm font-bold text-[#C9A961]">
                         {item.hours || item.amount || item.role}
                       </div>
                       {item.availability && (
@@ -105,22 +105,22 @@ export default function ResourceAllocation() {
           ))}
         </div>
 
-        <div className="mt-12 bg-gradient-to-br from-[#2D1B4E] to-[#1A0F2E] rounded-3xl p-8 md:p-12 text-white">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+        <div className="mt-10 bg-gradient-to-br from-[#1A1A1A] to-[#0A0A0A] rounded-2xl p-6 md:p-8 text-white">
+          <div className="grid md:grid-cols-3 gap-6 text-center">
             <div>
-              <div className="text-4xl font-bold text-[#D4AF37] mb-2">450+</div>
-              <div className="text-sm text-gray-300">Total Hours Invested</div>
-              <div className="text-xs text-gray-400 mt-1">Across 6 months</div>
+              <div className="text-3xl font-bold text-[#C9A961] mb-1.5">450+</div>
+              <div className="text-xs sm:text-sm text-gray-300">Total Hours Invested</div>
+              <div className="text-xs text-gray-400 mt-0.5">Across 6 months</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-[#D4AF37] mb-2">₹2,25,000</div>
-              <div className="text-sm text-gray-300">Service Fee</div>
-              <div className="text-xs text-gray-400 mt-1">Ad budget separate</div>
+              <div className="text-3xl font-bold text-[#C9A961] mb-1.5">₹2,25,000</div>
+              <div className="text-xs sm:text-sm text-gray-300">Service Fee</div>
+              <div className="text-xs text-gray-400 mt-0.5">Ad budget separate</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-[#D4AF37] mb-2">6</div>
-              <div className="text-sm text-gray-300">Expert Team Members</div>
-              <div className="text-xs text-gray-400 mt-1">Dedicated specialists</div>
+              <div className="text-3xl font-bold text-[#C9A961] mb-1.5">6</div>
+              <div className="text-xs sm:text-sm text-gray-300">Expert Team Members</div>
+              <div className="text-xs text-gray-400 mt-0.5">Dedicated specialists</div>
             </div>
           </div>
 

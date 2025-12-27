@@ -85,44 +85,44 @@ export default function MonthlyTimeline({ month }: MonthlyTimelineProps) {
   const data = monthData[month];
 
   return (
-    <section className="min-h-screen bg-[#FAFAF8] pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen bg-[#FAFAF8] pt-10 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-6 sm:mb-8 lg:mb-10">
-          <div className="inline-block bg-[#D4AF37] text-[#2D1B4E] px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs font-bold mb-2 sm:mb-3">
+        <div className="text-center mb-5 sm:mb-6 lg:mb-8">
+          <div className="inline-block bg-[#D4AF37] text-[#2D1B4E] px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs font-bold mb-1.5 sm:mb-2">
             MONTH {month}
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2D1B4E] mb-2 lg:mb-3 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2D1B4E] mb-1.5 lg:mb-2 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
             {data.title}
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-gray-600 max-w-3xl mx-auto leading-relaxed">
             {data.focus}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8 lg:mb-10">
+        <div className="grid md:grid-cols-2 gap-3 sm:gap-4 mb-5 sm:mb-6 lg:mb-8">
           {data.weeks.map((week, index) => (
-            <div key={index} className="bg-white rounded-lg lg:rounded-xl p-4 sm:p-6 shadow-lg border-2 border-gray-100">
-              <h3 className="text-lg sm:text-xl font-bold text-[#2D1B4E] mb-3 sm:mb-4 tracking-tight">{week.week}</h3>
+            <div key={index} className="bg-white rounded-lg lg:rounded-xl p-3 sm:p-4 shadow-lg border-2 border-gray-100">
+              <h3 className="text-base sm:text-lg font-bold text-[#2D1B4E] mb-2 sm:mb-3 tracking-tight">{week.week}</h3>
               
-              <div className="mb-3 sm:mb-4">
-                <h4 className="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider mb-1.5 sm:mb-2">Tasks</h4>
-                <ul className="space-y-1.5">
+              <div className="mb-2 sm:mb-3">
+                <h4 className="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider mb-1 sm:mb-1.5">Tasks</h4>
+                <ul className="space-y-1">
                   {week.tasks.map((task, idx) => (
                     <li key={idx} className="flex items-start">
-                      <i className="ri-arrow-right-circle-fill text-[#D4AF37] text-sm sm:text-base mt-0.5 mr-2 flex-shrink-0"></i>
-                      <span className="text-gray-700 text-xs sm:text-sm leading-relaxed">{task}</span>
+                      <i className="ri-arrow-right-circle-fill text-[#D4AF37] text-xs sm:text-sm mt-0.5 mr-2 flex-shrink-0"></i>
+                      <span className="text-gray-700 text-xs leading-relaxed">{task}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider mb-1.5 sm:mb-2">Deliverables</h4>
-                <ul className="space-y-1.5">
+                <h4 className="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider mb-1 sm:mb-1.5">Deliverables</h4>
+                <ul className="space-y-1">
                   {week.deliverables.map((deliverable, idx) => (
                     <li key={idx} className="flex items-start">
-                      <i className="ri-checkbox-circle-fill text-[#2D1B4E] text-sm sm:text-base mt-0.5 mr-2 flex-shrink-0"></i>
-                      <span className="text-gray-700 text-xs sm:text-sm font-medium leading-relaxed">{deliverable}</span>
+                      <i className="ri-checkbox-circle-fill text-[#2D1B4E] text-xs sm:text-sm mt-0.5 mr-2 flex-shrink-0"></i>
+                      <span className="text-gray-700 text-xs font-medium leading-relaxed">{deliverable}</span>
                     </li>
                   ))}
                 </ul>
@@ -131,34 +131,34 @@ export default function MonthlyTimeline({ month }: MonthlyTimelineProps) {
           ))}
         </div>
 
-        <div className="bg-gradient-to-br from-[#2D1B4E] to-[#1A0F2E] rounded-lg lg:rounded-xl p-4 sm:p-6 text-white">
-          <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <div className="bg-gradient-to-br from-[#2D1B4E] to-[#1A0F2E] rounded-lg lg:rounded-xl p-3 sm:p-4 text-white">
+          <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
             Resource Allocation
           </h3>
-          <div className="grid md:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid md:grid-cols-3 gap-3 sm:gap-4">
             <div>
-              <div className="flex items-center mb-1.5">
-                <i className="ri-time-line text-[#D4AF37] text-lg sm:text-xl mr-2 flex-shrink-0"></i>
-                <span className="text-xs sm:text-sm text-gray-300">Time Investment</span>
+              <div className="flex items-center mb-1">
+                <i className="ri-time-line text-[#D4AF37] text-sm sm:text-base mr-2 flex-shrink-0"></i>
+                <span className="text-xs text-gray-300">Time Investment</span>
               </div>
-              <p className="text-2xl sm:text-3xl font-bold text-[#D4AF37]">{data.resources.hours}</p>
+              <p className="text-xl sm:text-2xl font-bold text-[#D4AF37]">{data.resources.hours}</p>
             </div>
             <div>
-              <div className="flex items-center mb-1.5">
-                <i className="ri-money-dollar-circle-line text-[#D4AF37] text-lg sm:text-xl mr-2 flex-shrink-0"></i>
-                <span className="text-xs sm:text-sm text-gray-300">Service Fee</span>
+              <div className="flex items-center mb-1">
+                <i className="ri-money-dollar-circle-line text-[#D4AF37] text-sm sm:text-base mr-2 flex-shrink-0"></i>
+                <span className="text-xs text-gray-300">Service Fee</span>
               </div>
-              <p className="text-2xl sm:text-3xl font-bold text-[#D4AF37]">{data.resources.budget}</p>
+              <p className="text-xl sm:text-2xl font-bold text-[#D4AF37]">{data.resources.budget}</p>
               <p className="text-xs text-gray-400 mt-0.5">Ad budget excluded</p>
             </div>
             <div>
-              <div className="flex items-center mb-1.5">
-                <i className="ri-team-line text-[#D4AF37] text-lg sm:text-xl mr-2 flex-shrink-0"></i>
-                <span className="text-xs sm:text-sm text-gray-300">Team Members</span>
+              <div className="flex items-center mb-1">
+                <i className="ri-team-line text-[#D4AF37] text-sm sm:text-base mr-2 flex-shrink-0"></i>
+                <span className="text-xs text-gray-300">Team Members</span>
               </div>
-              <div className="space-y-0.5 sm:space-y-1 mt-1.5 sm:mt-2">
+              <div className="space-y-0.5 mt-1 sm:mt-1.5">
                 {data.resources.team.map((member, idx) => (
-                  <p key={idx} className="text-xs sm:text-sm text-gray-300">{member}</p>
+                  <p key={idx} className="text-xs text-gray-300">{member}</p>
                 ))}
               </div>
             </div>
